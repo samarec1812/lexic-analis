@@ -22,4 +22,5 @@ jobs:
       run: go build -v ./...
 
     - name: Test
-      run: go test -v ./...
+      run: go test -go test -run="Checker_[1-5]" -v
+
