@@ -1,0 +1,4 @@
+program ppp;
+var a : integer;
+begin
+end.

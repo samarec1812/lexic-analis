@@ -1,0 +1,9 @@
+program ppp;
+var a,b:integer;
+begin
+read();
+for i := 1 to b do
+begin
+read(a,b);
+a := b + a;
+end.

@@ -1,0 +1,15 @@
+program id;
+Var
+	h2,g6:integer;
+function g5():integer;
+begin
+;;
+end;
+Begin
+	for i := 5 to f+5 do
+	begin
+		read(b4,f);
+	end;
+	if ((a < 5) and (g > 4)) then
+		write(g5);
+end.

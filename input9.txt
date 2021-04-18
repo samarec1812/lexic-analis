@@ -1,0 +1,14 @@
+program fact;
+
+var
+  n,fact: integer;
+  i: integer;
+begin
+  read(n);
+  fact := 1;
+  for i := 2 to n do
+    fact := fact * i;
+  write(n,fact);
+end.
+
+a := 2;

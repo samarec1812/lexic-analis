@@ -1,0 +1,7 @@
+program ppp;
+var a,b:integer;
+begin
+read();
+if not a > b
+write(a);
+end.
