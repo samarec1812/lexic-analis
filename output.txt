@@ -1,0 +1,13 @@
+program ppp;
+var a,b:integer;
+begin
+read(a);
+for i := 1 to b do
+begin
+write(a,b);
+a := b / a;
+end;
+if true then a := a / b;
+end.
+---------------------------
+true

@@ -2,6 +2,6 @@ program ppp;
 var a,b:integer;
 begin
 read();
-if not a > b
+if a > b
 write(a);
 end.

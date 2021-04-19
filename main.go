@@ -4,20 +4,16 @@ import (
 	"fmt"
 	"github.com/samarec1812/lexic-analis/analysator"
 	"io/ioutil"
+	"os"
 	_ "regexp"
 	"strconv"
 	"strings"
 )
 
-//func SplitToken(word string) {
-//	for _, sym := range word {
-//		if unicode.IsLetter(sym)
-//	}
-//}
 
 func main() {
-	// 2 sposob
-	content, err := ioutil.ReadFile("input8.txt")
+
+	content, err := ioutil.ReadFile("input10.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -39,4 +35,21 @@ func main() {
 	}
 	// tokensLength := len(tokens)
 	fmt.Println(tokens)
+	file, err := os.Create("output.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+	finallyStr :=  prog + "\n"
+	finallyStr += "---------------------------\n"
+	finallyStr += strconv.FormatBool(check)
+	finallyStr += "\n"
+	if !check {
+		finallyStr += strconv.Itoa(analysator.GetErrorLine(tokens2))
+	}
+
+	file.WriteString(finallyStr)
+
+
 }

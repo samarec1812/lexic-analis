@@ -1,7 +1,6 @@
 package analysator
 
 import (
-	"fmt"
 	"unicode"
 )
 
@@ -601,7 +600,7 @@ func CheckArifmExpr(expr []string) bool {
 		if expr[i] == "(" {
 			balance += 1
 			if !IsArifmOperation(expr[i-1]) && !(expr[i-1] == "(") {
-				fmt.Println("ТУТЬ ", expr[i-1] + " " +  expr[i+1])
+
 				return false }
 			if !(Identificator(expr[i+1]) || expr[i+1] == "-" || Number(expr[i+1]) || expr[i+1] == "(") { return false }
 		} else if expr[i] == ")" {
@@ -611,11 +610,9 @@ func CheckArifmExpr(expr []string) bool {
 				return false
 			}
 			if !(Identificator(expr[i-1]) || expr[i-1] == ")" || Number(expr[i-1])) {
-				fmt.Println("Туть 3")
 				return false
 			}
 			if !IsArifmOperation(expr[i+1]) && !(expr[i+1] == ")") {
-				fmt.Println("Туть 2")
 				return false
 			}
 		} else if expr[i] == "+" {

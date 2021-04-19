@@ -37,9 +37,7 @@ func TestChecker_4(t *testing.T) {
 }
 
 func TestChecker_1(t *testing.T) {
-	//if analysator.Checker(wrapper("input2.txt")) != true {
-	//	t.Error("TEST 1: false != true")
-	//}
+
 	if analysator.Checker(wrapper("input.txt")) != false {
 		t.Error("TEST 1: true != false")
 	}
@@ -73,18 +71,25 @@ func TestChecker_9(t *testing.T) {
 
 func TestChecker_6(t *testing.T) {
 	if analysator.Checker(wrapper("input6.txt")) != true {
-		t.Error("TEST 5: false != true")
+		t.Error("TEST 6: false != true")
 	}
 }
 
 func TestChecker_7(t *testing.T) {
 	if analysator.Checker(wrapper("input7.txt")) != true {
-		t.Error("TEST 5: false != true")
+		t.Error("TEST 7: false != true")
 	}
 }
 
 func TestChecker_8(t *testing.T) {
 	if analysator.Checker(wrapper("input8.txt")) != true {
-		t.Error("TEST 5: false != true")
+		t.Error("TEST 8: false != true")
+	}
+}
+
+
+func TestChecker_10(t *testing.T) {
+	if analysator.Checker(wrapper("input10.txt")) != true {
+		t.Error("TEST 10: false != true")
 	}
 }
